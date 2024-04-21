@@ -11,8 +11,6 @@ import { Play } from "lucide-react";
 import { useSparql } from "@/hooks/sparql.hooks";
 import { Loader } from "lucide-react";
 
-
-
 const executeSparqlQuery = (endpoint: string, query: string): Promise<SPARQLResult> => {
   return new Promise<SPARQLResult>((resolve, reject) => {
     fetch(endpoint, {
@@ -39,14 +37,12 @@ const executeSparqlQuery = (endpoint: string, query: string): Promise<SPARQLResu
   });
 };
 
-
-
 export default function SparQlPage() {
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState<SPARQLResult>()
+  const [error, setError] = useState<string | null>(null);
 
   const { query, setQuery, endPoint, setEndPoint } = useSparql()
-
 
   useEffect(() => {
     setEndPoint("http://localhost:3030/cap-vert-dish/query");
@@ -55,15 +51,18 @@ export default function SparQlPage() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setLoading(true)
-    console.log(endPoint, query)
-    executeSparqlQuery(endPoint, query).then((data: SPARQLResult) => {
-
-      setTimeout(() => {
-        setResult(data)
-        setLoading(false)
-      }, 1000)
-
-    })
+    setError(null); // Resetting error state
+    executeSparqlQuery(endPoint, query)
+      .then((data: SPARQLResult) => {
+        setTimeout(() => {
+          setResult(data)
+          setLoading(false)
+        }, 1000)
+      })
+      .catch((error) => {
+        setError("Error executing SPARQL query: " + error.message);
+        setLoading(false);
+      });
   }
 
   return (
@@ -93,7 +92,15 @@ export default function SparQlPage() {
           {loading && <div className="flex flex-1 h-full w-full items=-center justify-center">
             <Loader size={64} className="animate-spin " />
           </div>}
-          {!loading && <Card>
+          {error && <Card>
+            <CardHeader>
+              <CardTitle>Error</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>{error}</p>
+            </CardContent>
+          </Card>}
+          {!loading && !error && <Card>
             <CardHeader>
               <CardTitle>Results</CardTitle>
             </CardHeader>
@@ -121,7 +128,6 @@ export default function SparQlPage() {
             </CardContent>
           </Card>}
         </section>
-
       </div>
     </div>
   )

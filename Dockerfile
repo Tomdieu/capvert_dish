@@ -1,5 +1,46 @@
+# Use a base image for Jena Fuseki 
+FROM stain/jena-fuseki as fuseki
+
+# ENV ADMIN_PASSWORD=adminpw123
+
+# Copy configuration files and ontology
+# COPY config/config.ttl /jena-fuseki/run/
+COPY ontology/cap_vert_dishes.owl /jena-fuseki/ontology
+
+# Copy the ontology file to the dataset directory of Jena Fuseki
+# COPY ./ontology/cap_vert_dishes.owl /jena-fuseki/run/databases/dataset/
+
+# Expose port 3030 for Jena Fuseki
+EXPOSE 3030
+
+# Start Jena Fuseki server
+CMD ["/jena-fuseki/fuseki-server","--file=/jena-fuseki/ontology/cap_vert_dishes.owl","/cap-vert-dish"]
+
 # Use a base image with Node.js to build React app
-FROM node:alpine AS builder
+FROM node:18-alpine AS build
+
+# Set working directory
+WORKDIR /app
+
+# Copy package.json and package-lock.json to install dependencies
+COPY package*.json ./
+COPY --from=fuseki /jena-fuseki/ontology /app/ontology
+RUN npm ci
+RUN npm install -g npm@latest
+RUN npm i sharp
+
+# Copy the rest of the application code
+COPY . .
+
+# Build React app
+# This run will store the build in the folder build
+RUN npm run build
+
+# Use the built Jena Fuseki image
+FROM fuseki AS runtime
+
+# Use a base image with Node.js to run Next.js app
+FROM node:18-alpine AS nextjs
 
 # Set working directory
 WORKDIR /app
@@ -8,33 +49,17 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm ci --only=production
 
 # Copy the rest of the application code
 COPY . .
 
-# Build React app
-RUN npm run build
+COPY --from=build /app/build ./build
 
-# Use a base image for Jena Fuseki
-FROM openjdk:8-jre-slim
+# Expose port 3000 for Next.js app
+EXPOSE 3000
 
-# Set working directory
-WORKDIR /fuseki
+USER node
 
-# Download and extract Jena Fuseki (replace <version> with the actual version)
-RUN wget https://downloads.apache.org/jena/binaries/apache-jena-fuseki-4.8.0.tar.gz && \
-    tar -xzvf apache-jena-fuseki-4.8.0.tar.gz && \
-    rm apache-jena-fuseki-4.8.0.tar.gz
-
-# Copy the built React app from the builder stage
-COPY --from=builder /app/build /fuseki/webapp
-
-# Copy your .owl file into the dataset directory
-COPY your_ontology.owl /fuseki/apache-jena-fuseki-4.8.0/run/databases/dataset/
-
-# Expose ports for Jena Fuseki (default is 3030) and your React app (if needed)
-EXPOSE 3030
-
-# Define entry point to start Jena Fuseki
-CMD ["/fuseki/apache-jena-fuseki-4.8.0/fuseki-server"]
+# Start Next.js app
+CMD npm start

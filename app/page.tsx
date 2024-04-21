@@ -11,7 +11,7 @@ import { useFilter } from "@/hooks/filter.hooks";
 import { Loader } from "lucide-react";
 
 export default function Page() {
-  const { handleSearch, dishes,loading } = useHandleSearch();
+  const { handleSearch, dishes,loading,error } = useHandleSearch();
   const {dishFilter,personFilter} = useFilter()
   useEffect(() => {
     if(!dishFilter && !personFilter){
@@ -35,10 +35,11 @@ export default function Page() {
             <SideBar/>
           </div>
           <div className="w-10/12 h-full px-3">
+            {error && <p className="text-lg text-red-300 font-bold text-center">{error}</p>}
             {loading && <div className="flex flex-1 h-full w-full items=-center justify-center">
             <Loader size={64} className="animate-spin "/>
             </div>}
-            {!loading && (
+            {!loading && !error && (
               <section className="grid grid-cols-1 space-y-5">
               <div className="flex items-center justify-between">
                 <h1 className="text-2xl font-bold">
