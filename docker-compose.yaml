@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+
+  web:
+
+    image: cap_verd_dish:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    container_name: cap_verd_dish
+    volumes:
+      - .:/app
+    networks:
+      - bridge
+
+networks:
+    bridge:
+        driver: bridge

@@ -1,0 +1,929 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#"
+     xml:base="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cap-vert-dish="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#eats -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#eats">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Food"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#hasFood -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#hasFood">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Food"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#hasIngredient">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Food"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#isFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#isFrom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#FoodComponentName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#FoodComponentName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#FoodComponent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#FoodDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#FoodDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Food"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#FoodImage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#FoodImage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Food"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#FoodName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#FoodName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Food"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#PlaceName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#PlaceName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Place"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#personName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#personName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Food -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Food"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#FoodComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#FoodComponent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Place -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Place"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Arroz_Doce -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Arroz_Doce">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#cinnamon"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#milk"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#rice"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#sugar"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#vanilla"/>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Arroz%20Doce.jpg</FoodImage>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arroz Doce</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Arroz_de_Marisco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Arroz_de_Marisco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#garlic"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#onions"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#rice"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#seafood_mix"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#tomatoes"/>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Arroz%20de%20Marisco.jpg</FoodImage>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arroz de Marisco</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Bife_à_Caboverdiana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Bife_à_Caboverdiana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#beef"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#garlic"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#onions"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#spices"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#wine"/>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Bife%20%C3%A0%20Caboverdiana.jpg</FoodImage>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bife à Caboverdiana</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Buzio_Grelhado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Buzio_Grelhado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#conch"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#garlic"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#onions"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#spices"/>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Buzio%20Grelhado.jpg</FoodImage>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buzio Grelhado</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Cachupa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Cachupa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#beans"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#cassava"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#corn"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#sweet_potatoes"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#meat/fish"/>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Cachupa.jpg</FoodImage>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cachupa</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Caldo_de_Peixe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Caldo_de_Peixe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#fish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#onions"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#spices"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#tomatoes"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#vegetables"/>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Caldo%20de%20Peixe.jpg</FoodImage>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caldo de Peixe</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Camarão_à_Guillo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Camarão_à_Guillo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#butter"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#garlic"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#lemon"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#shrimp"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#spices"/>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Camar%C3%A3o%20%C3%A0%20Guillo.jpg</FoodImage>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Camarão à Guillo</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Canja_de_Galinha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Canja_de_Galinha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#carrots"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#chicken"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#garlic"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#onions"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#rice"/>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Canja%20de%20Galinha.jpg</FoodImage>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canja de Galinha</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Caril_de_Cabrito -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Caril_de_Cabrito">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#coconut_milk"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#curry_spices"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#goat_meat"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#onions"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#potatoes"/>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Caril%20de%20Cabrito.jpg</FoodImage>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caril de Cabrito</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Catchupa_Rica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Catchupa_Rica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <eats rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Buzio_Grelhado"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#beans"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#cassava"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#corn"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#sweet_potatoes"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#meat/fish"/>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Catchupa%20Rica.jpg</FoodImage>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catchupa Rica</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Espetada_de_Atum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Espetada_de_Atum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#garlic"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#onions"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#peppers"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#spices"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#tuna"/>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Espetada%20de%20Atum.jpg</FoodImage>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Espetada de Atum</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Feijoada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Feijoada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#beans"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#sausage"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#spices"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#vegetables"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#pork/beef"/>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Feijoada.jpg</FoodImage>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feijoada</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Frango_Grelhado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Frango_Grelhado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#chicken"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#garlic"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#lemon"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#olive_oil"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#spices"/>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Frango%20Grelhado.jpg</FoodImage>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frango Grelhado</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Lagosta_Grelhada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Lagosta_Grelhada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#butter"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#garlic"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#lemon"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#lobster"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#spices"/>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Lagosta%20Grelhada.jpg</FoodImage>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lagosta Grelhada</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Moqueca_de_Peixe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Moqueca_de_Peixe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <eats rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Lagosta_Grelhada"/>
+        <eats rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Moqueca_de_Peixe"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#coconut_milk"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#fish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#peppers"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#spices"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#tomatoes"/>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Moqueca%20de%20Peixe.jpg</FoodImage>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moqueca de Peixe</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Pastéis_de_Bacalhau -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Pastéis_de_Bacalhau">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#codfish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#eggs"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#onions"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#parsley"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#potatoes"/>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Past%C3%A9is%20de%20Bacalhau.jpg</FoodImage>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pastéis de Bacalhau</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Polvo_à_Lagareiro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Polvo_à_Lagareiro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#garlic"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#octopus"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#olive_oil"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#potatoes"/>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Polvo%20%C3%A0%20Lagareiro.jpg</FoodImage>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polvo à Lagareiro</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Queijadas_de_Coco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Queijadas_de_Coco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#butter"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#coconut"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#eggs"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#flour"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#sugar"/>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Queijadas%20de%20Coco.jpg</FoodImage>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Queijadas de Coco</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Sopa_de_Legumes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Sopa_de_Legumes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#onions"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#potatoes"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#spices"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#tomatoes"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#vegetables"/>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Sopa%20de%20Legumes.jpg</FoodImage>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sopa de Legumes</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Xerém -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Xerém">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#bacon"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#cornmeal"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#garlic"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#onions"/>
+        <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#sausage"/>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Xer%C3%A9m.jpg</FoodImage>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xerém</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#bacon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#bacon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#beans -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#beans">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beans</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#beef -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#beef">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#butter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#butter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#cap-verd -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#cap-verd">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Place"/>
+        <hasFood rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Arroz_de_Marisco"/>
+        <hasFood rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Buzio_Grelhado"/>
+        <hasFood rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Cachupa"/>
+        <hasFood rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Caldo_de_Peixe"/>
+        <PlaceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cap Verd</PlaceName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#carrots -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#carrots">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carrots</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#cassava -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#cassava">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cassava</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#chicken -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#chicken">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chicken</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#cinnamon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#cinnamon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#coconut -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#coconut">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#coconut_milk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#coconut_milk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coconut milk</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#codfish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#codfish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#conch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#conch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">conch</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#corn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#corn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corn</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#cornmeal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#cornmeal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#curry_spices -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#curry_spices">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">curry spices</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#eggs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#eggs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#fish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#fish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fish</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#flour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#flour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#garlic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#garlic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">garlic</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#goat_meat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#goat_meat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">goat meat</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#gottfried -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#gottfried">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Person"/>
+        <eats rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Cachupa"/>
+        <eats rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Caldo_de_Peixe"/>
+        <eats rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Camarão_à_Guillo"/>
+        <eats rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Canja_de_Galinha"/>
+        <eats rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Caril_de_Cabrito"/>
+        <eats rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Catchupa_Rica"/>
+        <personName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gottfried</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#ivan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#ivan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Person"/>
+        <eats rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Feijoada"/>
+        <eats rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Frango_Grelhado"/>
+        <eats rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Moqueca_de_Peixe"/>
+        <personName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ivan</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#lemon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#lemon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#lobster -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#lobster">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#milk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#milk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#octopus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#octopus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#olive_oil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#olive_oil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#onions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#onions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">onions</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#parsley -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#parsley">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#peppers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#peppers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#potatoes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#potatoes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">potatoes</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#rice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#rice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rice</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#sausage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#sausage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#seafood_mix -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#seafood_mix">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#shrimp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#shrimp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#spices -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#spices">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spices</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#sugar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#sugar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#sweet_potatoes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#sweet_potatoes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sweet potatoes</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#tomatoes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#tomatoes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tomatoes</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#tomdieu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#tomdieu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Person"/>
+        <eats rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Cachupa"/>
+        <eats rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Caril_de_Cabrito"/>
+        <eats rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Lagosta_Grelhada"/>
+        <eats rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Moqueca_de_Peixe"/>
+        <eats rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Pastéis_de_Bacalhau"/>
+        <eats rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Queijadas_de_Coco"/>
+        <eats rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Sopa_de_Legumes"/>
+        <eats rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Xerém"/>
+        <personName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tomdieu</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#tuna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#tuna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#vanilla -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#vanilla">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#vegetables -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#vegetables">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vegetables</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#wine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#wine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#meat/fish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#meat/fish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+        <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meat/fish</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#pork/beef -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#pork/beef">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Ingredient"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
