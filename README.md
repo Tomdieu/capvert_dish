@@ -27,11 +27,13 @@ To get started with Cap Verd Dish, follow these simple steps:
     ```bash
     docker build -t fuseki_next .
     ```
+
 4. Run the Docker container:
 
     ```bash
     docker run -p 3030:3030 -p 3000:3000 fuseki_next
     ```
+
 5. Open your web browser and navigate to the following URLs:
 
     - <http://localhost:3000>: Frontend interface for Cap Verd Dish.
