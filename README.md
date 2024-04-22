@@ -1,52 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Cap Verd Dish
+
+Welcome to Cap Verd Dish, a web application built with [Next.js](https://nextjs.org/) and powered by Fuseki.
+
+## Overview
+
+Cap Verd Dish is a project aimed at showcasing the rich culinary heritage of Cape Verde through an interactive web interface. This project leverages the power of Next.js for frontend development and Fuseki for managing RDF data.
 
 ## Getting Started
 
-First, run the development server:
+To get started with Cap Verd Dish, follow these simple steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone this repository to your local machine:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    ```bash
+    git clone https://github.com/yourusername/cap-verd-dish.git
+    ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Navigate to the project directory:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    ```bash
+    cd cap-verd-dish
+    ```
 
-## Learn More
+3. Build the Docker image:
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    docker build -t fuseki_next .
+    ```
+4. Run the Docker container:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    docker run -p 3030:3030 -p 3000:3000 fuseki_next
+    ```
+5. Open your web browser and navigate to the following URLs:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    - <http://localhost:3000>: Frontend interface for Cap Verd Dish.
+    - <http://localhost:3030>: Fuseki web UI for managing RDF data.
 
-## Deploy on Vercel
+## Fuseki Web UI Login
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To access the Fuseki web UI, use the following credentials:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Username**: admin
+- **Password**: [generated password displayed in the terminal during container startup]
 
-## Build docker image 
+## License
 
-Run 
-```bash
-docker build -t fuseki_next .
-```
-
-## Run docker image
-
-RUN 
-```
-docker run -p 3030:3030 -p 3000:3000 fuseki_next
-```
-
-docker run -p 3030:3030 fuseki_next
+This project is licensed under the MIT License - see the LICENSE file for details.
