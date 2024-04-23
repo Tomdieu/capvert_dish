@@ -10,6 +10,8 @@ import { FormEvent, useEffect, useState } from "react"
 import { Play } from "lucide-react";
 import { useSparql } from "@/hooks/sparql.hooks";
 import { Loader } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 const executeSparqlQuery = (endpoint: string, query: string): Promise<SPARQLResult> => {
   return new Promise<SPARQLResult>((resolve, reject) => {
@@ -82,7 +84,7 @@ export default function SparQlPage() {
               <label htmlFor="endPpoint" className="">SPARQL Endpoint</label>
               <Input id="endPpoint" placeholder="Sparql endpoint" type="url" name="url" required value={endPoint} onChange={(e) => setEndPoint(e.target.value)} />
               <label htmlFor="query" className="">SQuery Text</label>
-              
+
               <Textarea value={query} onChange={e => setQuery(e.target.value)} required className="h-40" id="query" name="query" placeholder="Enter your SPARQL query here..." />
               <Button type="submit">  <Play className="mr-2 h-4 w-4" /> Execute Query</Button>
             </form>
@@ -109,21 +111,58 @@ export default function SparQlPage() {
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      {result && result.head.vars.map((varName, index) => (
-                        <TableHead key={index}>{varName}</TableHead>
-                      ))}
+                      {result &&
+                        result.head.vars.map((varName, index) => (
+                          <TableHead key={index}>{varName}</TableHead>
+                        ))}
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {result && result.results.bindings.map((binding, rowIndex) => (
-                      <TableRow key={rowIndex}>
-                        {result.head.vars.map((varName, colIndex) => (
-                          <TableCell key={colIndex}>{binding[varName].value}</TableCell>
-                        ))}
-                      </TableRow>
-                    ))}
+                    {result &&
+                      result.results.bindings.map((binding, rowIndex) => (
+                        <TableRow key={rowIndex}>
+                          {result.head.vars.map((varName, colIndex) => {
+                            let cellValue = binding[varName].value.toString();
+                            // Check if the cell value is a URL
+                            if (cellValue.startsWith('http://') || cellValue.startsWith('https://')) {
+                              // Check if the URL is from GitHub and append ?raw=true if it's missing
+                              if (cellValue.includes('github.com') && !cellValue.includes('?raw=true')) {
+                                cellValue += '?raw=true';
+                              }
+                              // Check if the URL ends with an image file extension
+                              const isImageUrl = /\.(jpg|jpeg|png|gif|bmp)/i.test(cellValue);
+
+                              console.log({cellValue,isImageUrl})
+                              return (
+                                <TableCell key={colIndex}>
+                                  {isImageUrl ? (
+                                    <Image src={cellValue} alt={cellValue} height="200" style={{
+                                      aspectRatio: "300/200",
+                                      objectFit: "cover",
+                                    }}
+                                      width="300" />
+                                  ) : (
+                                    <Link className="text-primary" href={cellValue} target="_blank" rel="noopener noreferrer">
+                                      {cellValue}
+                                    </Link>
+                                  )}
+                                </TableCell>
+                              );
+                            } else {
+                              return (
+                                <TableCell key={colIndex}>
+                                  {cellValue}
+                                </TableCell>
+                              );
+                            }
+                          })}
+                        </TableRow>
+
+
+                      ))}
                   </TableBody>
                 </Table>
+
               </div>
             </CardContent>
           </Card>}

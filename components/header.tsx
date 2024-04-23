@@ -31,7 +31,7 @@ const Header = (props: Props) => {
         className="flex items-center cursor-pointer select-none hover:text-blue-500"
       >
         <Image src={"/logo.png"} width={64} height={64} alt="" />
-        <h1 className="text-xl font-bold">Cap Verd Dishes</h1>
+        <h1 className="sm:text-sm md:text-base lg:text-xl font-bold hidden sm:block">Cap Verd Dishes</h1>
       </Link>
       <div className="flex items-center gap-2">
         <Button asChild variant="link">

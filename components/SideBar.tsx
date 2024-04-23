@@ -99,7 +99,7 @@ const SideBar = () => {
   
 
   return (
-    <div className="flex space-y-4 flex-col px-1">
+    <div className="flex space-y-4 flex-col px-1 w-full h-full">
       <div className="flex items-center justify-between">
         <h1 className="font-bold text-xl">Filter</h1>
         {isFiltered && (
