@@ -52,17 +52,6 @@ const DishCard = ({ dish, index }: Props) => {
         <p className="text-gray-700 dark:text-gray-400 mb-4">
           {dish.description}
         </p>
-        {/* <ul className="text-gray-700 dark:text-gray-400 overflow-x-scroll flex items-center flex-nowrap line-clamp-1 gap-1 justify-start space-x-0.5">
-          {dish.ingredients.map((ingredient) => (
-            <li
-              className="bg-primary rounded-md text-muted px-1 py-0.5 select-none cursor-pointer text-xs"
-              key={ingredient}
-            >
-              {ingredient}
-            </li>
-          ))}
-          
-        </ul> */}
         <Carousel
           opts={{
             align: "start",
@@ -73,9 +62,9 @@ const DishCard = ({ dish, index }: Props) => {
           <CarouselPrevious />
 
           <CarouselContent className="">
-            {dish.ingredients.map((ingredient) => (
+            {dish.ingredients.map((ingredient,index) => (
               <CarouselItem
-                key={ingredient}
+                key={index}
                 title={ingredient}
                 className="pl-1 mx-1 line-clamp-1 md:basis-1/2 lg:basis-1/3  select-none border rounded-md"
               >

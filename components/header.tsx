@@ -11,6 +11,7 @@ import { useSearch } from "@/hooks/search.hooks";
 import { useHandleSearch } from "@/hooks/handleSearh";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import Instances from "./instances";
 
 type Props = {};
 
@@ -34,7 +35,8 @@ const Header = (props: Props) => {
         <h1 className="sm:text-sm md:text-base lg:text-xl font-bold hidden sm:block">Cap Verd Dishes</h1>
       </Link>
       <div className="flex items-center gap-2">
-        <Button asChild variant="link">
+        <Instances/>
+        <Button asChild variant="ghost">
           <Link  href={"/sparql"} className={cn(pathName === '/sparql' && "font-bold underline drop-shadow-lg ")}>SparQL</Link>
         </Button>
         <form

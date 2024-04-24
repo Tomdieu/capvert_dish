@@ -137,8 +137,8 @@ const SideBar = () => {
             <SelectValue placeholder="------" />
           </SelectTrigger>
           <SelectContent>
-            {persons?.map((person) => (
-              <SelectItem value={person}>{person}</SelectItem>
+            {persons?.map((person,index) => (
+              <SelectItem value={person} key={index}>{person}</SelectItem>
             ))}
           </SelectContent>
         </Select>

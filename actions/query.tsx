@@ -1,6 +1,5 @@
 "use server";
 
-import DishCard from "@/components/DishCard";
 import SparqlClient from "sparql-http-client";
 
 const client = new SparqlClient({
@@ -113,6 +112,89 @@ export const getPersons = (): Promise<string[]> => {
   });
 };
 
+export const getClasses = (): Promise<ClassWithSubclasses> => {
+  const query = `
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX cvd: <http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#>
+
+    SELECT DISTINCT ?class ?subclass
+    WHERE {
+      ?class a owl:Class .
+      OPTIONAL {
+        ?subclass rdfs:subClassOf ?class .
+      }
+    }
+  `;
+
+  return new Promise<ClassWithSubclasses>((resolve, reject) => {
+    const classes: ClassWithSubclasses = {};
+
+    const stream = client.query.select(query);
+
+    stream.on('data', (data) => {
+      let className = data.class.value;
+      if (typeof className === 'string') {
+        className = className.split('#')[1];
+      }
+      let subclass = data.subclass ? data.subclass.value : null;
+      if (typeof subclass === 'string') {
+        subclass = subclass.split('#')[1];
+      }
+
+      if (!classes[className]) {
+        classes[className] = [];
+      }
+
+      if (subclass) {
+        classes[className].push(subclass);
+      }
+    });
+
+    stream.on('end', () => {
+      resolve(classes);
+    });
+
+    stream.on('error', (error) => {
+      reject(error);
+    });
+  });
+};
+
+
+export const getInstancesOfClass = (className: string) => {
+  const query = `
+  PREFIX owl: <http://www.w3.org/2002/07/owl#>
+  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+  PREFIX cvd: <http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#>
+  
+  SELECT DISTINCT ?instance
+  WHERE {
+    ?instance rdf:type cvd:${className} .
+  }
+  `;
+
+  return new Promise<string[]>((resolve, reject) => {
+    const instances: string[] = [];
+
+    const stream = client.query.select(query); // Assuming 'client' is already defined
+
+    stream.on('data', (data) => {
+      instances.push(data.instance.value);
+    });
+
+    stream.on('end', () => {
+      resolve(instances);
+    });
+
+    stream.on('error', (error) => {
+      reject(error);
+    });
+  });
+}
+
 export const getDishOfPerson = (personName: string) => {
   const query = `
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -178,13 +260,13 @@ export const getDishOfPerson = (personName: string) => {
 };
 
 
-export const executeSparqlQuery = (endpoint:string, query:string) => {
+export const executeSparqlQuery = (endpoint: string, query: string) => {
   const client = new SparqlClient({
     endpointUrl: endpoint,
   });
 
   return new Promise<any>((resolve, reject) => {
-    const result:any[] = [];
+    const result: any[] = [];
     const stream = client.query.select(query);
 
     stream.on("data", (row: any) => {
@@ -200,3 +282,5 @@ export const executeSparqlQuery = (endpoint:string, query:string) => {
     });
   });
 }
+
+

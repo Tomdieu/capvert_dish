@@ -20,7 +20,6 @@ export default function Page() {
     }
   }, []);
 
-  console.log(dishes);
 
   return (
     <main
@@ -53,7 +52,7 @@ export default function Page() {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 space-x-3 gap-2">
                 {dishes.map((dish, index) => (
-                  <DishCard key={dish.name} index={index} dish={dish} />
+                  <DishCard key={dish.name+"_"+index} index={index} dish={dish} />
                 ))}
               </div>
             </section>

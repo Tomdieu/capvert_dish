@@ -46,6 +46,7 @@ export default function SparQlPage() {
 
   const { query, setQuery, endPoint, setEndPoint } = useSparql()
 
+
   useEffect(() => {
     setEndPoint("http://localhost:3030/cap-vert-dish/query");
   }, [])
@@ -102,7 +103,7 @@ export default function SparQlPage() {
               <p>{error}</p>
             </CardContent>
           </Card>}
-          {!loading && !error && <Card>
+          {!loading && !error && result && <Card>
             <CardHeader>
               <CardTitle>Results</CardTitle>
             </CardHeader>
@@ -132,7 +133,6 @@ export default function SparQlPage() {
                               // Check if the URL ends with an image file extension
                               const isImageUrl = /\.(jpg|jpeg|png|gif|bmp)/i.test(cellValue);
 
-                              console.log({cellValue,isImageUrl})
                               return (
                                 <TableCell key={colIndex}>
                                   {isImageUrl ? (

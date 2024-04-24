@@ -1,0 +1,29 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+ 
+SELECT DISTINCT ?subject ?label ?supertype
+WHERE {
+    { ?subject a owl:Class . } UNION { ?individual a ?subject . } .
+    OPTIONAL { ?subject rdfs:subClassOf ?supertype } .
+    OPTIONAL { ?subject rdfs:label ?label }
+} ORDER BY ?subject
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX cvd: <http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#>
+SELECT DISTINCT ?subject ?label ?supertype
+WHERE {
+    { ?subject a cvd:Class . } UNION { ?individual a ?subject . } .
+    OPTIONAL { ?subject rdfs:subClassOf ?supertype } .
+    OPTIONAL { ?subject rdfs:label ?label }.
+    FILTER (?subject != cvd:Class &&
+        ?subject != rdf:List &&
+        ?subject != rdf:Property &&
+        ?subject != rdfs:Class &&
+        ?subject != rdfs:Datatype &&
+        ?subject != rdfs:ContainerMembershipProperty &&
+        ?subject != owl:DatatypeProperty &&
+        ?subject != owl:NamedIndividual &&
+        ?subject != owl:Ontology )
+} ORDER BY ?subject

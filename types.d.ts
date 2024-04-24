@@ -58,3 +58,22 @@ declare type SPARQLResult = {
     }>[];
   };
 };
+
+type ClassWithSubclasses = {
+  [className: string]: string[];
+};
+
+
+// declare type SPARQLResult = {
+//   head: {
+//     vars: string[];
+//   };
+//   results: {
+//     bindings: {
+//       [key: string]: {
+//         type: string;
+//         value: string;
+//       };
+//     }[];
+//   };
+// };
