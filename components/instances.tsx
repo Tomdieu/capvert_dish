@@ -65,15 +65,24 @@ const Instances = (props: Props) => {
         if (selectedClass) {
             handleClassChange(selectedClass);
         }
-    },[selectedClass])
+    }, [selectedClass])
 
 
 
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <Button variant="ghost" title='classes and instances'>C.I<span className='sr-only'>Classes and instances</span></Button>
-                
+                <Button variant="ghost" title='classes and instances' className="relative">
+                    <span>C.I</span>
+                    <span className='absolute top-0 right-0'>
+                        <span className="relative flex h-3 w-3">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+                        </span>
+                    </span>
+                    <span className='sr-only'>Classes and instances</span>
+                </Button>
+
             </DialogTrigger>
             <DialogContent className="max-w-md sm:max-w-xl md:max-w-3xl lg:max-w-5xl max-h-[600px]">
                 <DialogHeader>
@@ -86,17 +95,17 @@ const Instances = (props: Props) => {
                     <div className='w-4/12 h-full border-r px-5 '>
                         <ul className='flex flex-col gap-1'>
                             {Object.keys(classes).map((className, index) => (
-                                <React.Fragment key={className+"_"+index}>
+                                <React.Fragment key={className + "_" + index}>
                                     <li className='flex items-center'>
                                         <Dot />
-                                        <Button variant={selectedClass == className ? 'outline':'ghost'} onClick={() => setSelectedClass(className)}>{className}</Button>
+                                        <Button variant={selectedClass == className ? 'outline' : 'ghost'} onClick={() => setSelectedClass(className)}>{className}</Button>
 
                                     </li>
                                     <ol className='ml-2 flex gap-1 flex-col'>
                                         {classes[className].map((subclass, subIndex) => (
                                             <li key={`${index}-${subIndex}`} className='flex items-center'>
                                                 <Dot />
-                                                <Button variant={selectedClass == subclass ? 'outline':'ghost'} onClick={() => setSelectedClass(subclass)}>{subclass}</Button>
+                                                <Button variant={selectedClass == subclass ? 'outline' : 'ghost'} onClick={() => setSelectedClass(subclass)}>{subclass}</Button>
                                             </li>
                                         ))}
                                     </ol>
@@ -106,25 +115,27 @@ const Instances = (props: Props) => {
 
                     </div>
                     <div className='w-8/12  flex flex-col'>
-                        <div className='w-full  overflow-auto'>
-                            {loading && <Skeleton className="w-[100px] h-[20px] rounded-full" />}
+                        <div className='w-full overflow-auto'>
+                            {loading && <div className="flex flex-col gap-2 space-y-3 w-full">
+                                <Skeleton className="w-full h-[20px] rounded-full" />
+                                <Skeleton className="w-[150px] h-[20px] rounded-full" />
+                                <Skeleton className="w-[100px] h-[20px] rounded-full" /> 
+                                <Skeleton className="w-[50px] h-[20px] rounded-full" />
+                            </div>}
                             {!loading && instances.length > 0 && (
                                 <ScrollArea className='w-full h-full max-h-[500px]'>
-                                <h1 className='font-bold text-xl'>Instances of {selectedClass} <span className='text-sm'>({instances.length})</span></h1>
-                                <div className='flex gap-3 flex-wrap'>
-                                    {instances.map((instance, index) => (
-                                        <Badge variant="outline" className='cursor-pointer select-none' key={`${instance}_${index}`}>{instance.split('#')[1].replaceAll("_"," ").replace("/"," / ")}</Badge>
-                                    ))}
-                                </div>
+                                    <h1 className='font-bold text-xl'>Instances of {selectedClass} <span className='text-sm'>({instances.length})</span></h1>
+                                    <div className='flex gap-3 flex-wrap'>
+                                        {instances.map((instance, index) => (
+                                            <Badge variant="outline" className='cursor-pointer select-none' key={`${instance}_${index}`}>{instance.split('#')[1].replaceAll("_", " ").replace("/", " / ")}</Badge>
+                                        ))}
+                                    </div>
                                 </ScrollArea>
                             )}
                             {selectedClass && !loading && instances.length == 0 && <h1 className='font-bold text-xl'>No instances found for {selectedClass}</h1>}
                         </div>
                     </div>
                 </div>
-                {/* <DialogFooter>
-                    <Button type="submit">Save changes</Button>
-                </DialogFooter> */}
             </DialogContent>
         </Dialog>
     )

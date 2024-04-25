@@ -49,30 +49,32 @@ const DishCard = ({ dish, index }: Props) => {
       )}
       <div className="p-4">
         <h3 className="text-lg font-bold mb-2">{dish.name}</h3>
-        <p className="text-gray-700 dark:text-gray-400 mb-4">
+        <p className="mb-4 text-sm text-muted-foreground line-clamp-2">
           {dish.description}
         </p>
         <Carousel
           opts={{
             align: "start",
-            loop: false,
           }}
           className="w-full"
         >
-          <CarouselPrevious />
 
           <CarouselContent className="">
-            {dish.ingredients.map((ingredient,index) => (
+            {dish.ingredients.map((ingredient, index) => (
               <CarouselItem
                 key={index}
                 title={ingredient}
-                className="pl-1 mx-1 line-clamp-1 md:basis-1/2 lg:basis-1/3  select-none border rounded-md"
+                className="mx-1 truncate md:basis-1/2 lg:basis-1/3 select-none border rounded-full  "
               >
                 {ingredient}
+                <span className="sr-only">{ingredient}</span>
               </CarouselItem>
             ))}
           </CarouselContent>
+
+          <CarouselPrevious />
           <CarouselNext />
+
         </Carousel>
       </div>
     </MotionDiv>

@@ -64,6 +64,9 @@ export const getDishByName = async (name: string) => {
         if (dishItem.image !== "" && founded.image === "") {
           founded.image = dishItem.image;
         }
+        if(dishItem.description !== "" && founded.description === ""){
+          founded.description = dishItem.description;
+        }
       }
     });
     stream.on("end", () => resolve());

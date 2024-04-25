@@ -31,6 +31,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#hasComponent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Food"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#FoodComponent"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#hasFood -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#hasFood">
@@ -192,7 +201,7 @@
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#rice"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#sugar"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#vanilla"/>
-        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sweet rice pudding made with rice, milk, sugar, eggs, and flavored with cinnamon and lemon zest.</FoodDescription>
         <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Arroz%20Doce.jpg</FoodImage>
         <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arroz Doce</FoodName>
     </owl:NamedIndividual>
@@ -208,7 +217,7 @@
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#rice"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#seafood_mix"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#tomatoes"/>
-        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arroz de Marisco is a seafood rice dish made with rice, various seafood, vegetables, and spices. It&apos;s often served with a side.</FoodDescription>
         <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Arroz%20de%20Marisco.jpg</FoodImage>
         <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arroz de Marisco</FoodName>
     </owl:NamedIndividual>
@@ -239,7 +248,7 @@
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#garlic"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#onions"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#spices"/>
-        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buzio Grelhado is a grilled whelk dish marinated in garlic, olive oil, and lemon juice, then grilled until tender. It&apos;s often served with rice or salad.</FoodDescription>
         <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Buzio%20Grelhado.jpg</FoodImage>
         <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buzio Grelhado</FoodName>
     </owl:NamedIndividual>
@@ -250,12 +259,16 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Cachupa">
         <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Dish"/>
+        <hasComponent rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Carbohydrates"/>
+        <hasComponent rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Minerals"/>
+        <hasComponent rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Proteins"/>
+        <hasComponent rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Vitamins"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#beans"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#cassava"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#corn"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#sweet_potatoes"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#meat/fish"/>
-        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cachupa is the national dish of Cape Verde, a hearty stew made with corn (hominy), beans, vegetables, and various meats or fish. It is slow-cooked and flavored with tomatoes, garlic, and herbs.</FoodDescription>
         <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Cachupa.jpg</FoodImage>
         <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cachupa</FoodName>
     </owl:NamedIndividual>
@@ -271,7 +284,7 @@
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#spices"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#tomatoes"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#vegetables"/>
-        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caldo de Peixe is a traditional Cape Verdean fish soup made with various types of fish, onions, tomatoes, garlic, and spices. It&apos;s simmered to perfection, resulting in a flavorful and comforting soup that&apos;s enjoyed throughout the islands.</FoodDescription>
         <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Caldo%20de%20Peixe.jpg</FoodImage>
         <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caldo de Peixe</FoodName>
     </owl:NamedIndividual>
@@ -287,7 +300,7 @@
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#lemon"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#shrimp"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#spices"/>
-        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shrimp sautéed in garlic-infused olive oil and served with rice or bread.</FoodDescription>
         <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Camar%C3%A3o%20%C3%A0%20Guillo.jpg</FoodImage>
         <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Camarão à Guillo</FoodName>
     </owl:NamedIndividual>
@@ -303,9 +316,17 @@
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#garlic"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#onions"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#rice"/>
-        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canja de Galinha is a traditional Cape Verdean chicken and rice soup. It&apos;s a comforting soup with chicken, rice, vegetables, and saffron for a vibrant yellow color.</FoodDescription>
         <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Canja%20de%20Galinha.jpg</FoodImage>
         <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canja de Galinha</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Carbohydrates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Carbohydrates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#FoodComponent"/>
     </owl:NamedIndividual>
     
 
@@ -319,7 +340,7 @@
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#goat_meat"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#onions"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#potatoes"/>
-        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curried goat stew made with goat meat, potatoes, carrots, onions, garlic, and curry spices.</FoodDescription>
         <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Caril%20de%20Cabrito.jpg</FoodImage>
         <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caril de Cabrito</FoodName>
     </owl:NamedIndividual>
@@ -336,7 +357,7 @@
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#corn"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#sweet_potatoes"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#meat/fish"/>
-        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catchupa Rica is a richer version of cachupa, often made with additional meats, vegetables, and spices. It&apos;s a hearty and satisfying stew that&apos;s perfect for sharing with family and friends.</FoodDescription>
         <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Catchupa%20Rica.jpg</FoodImage>
         <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catchupa Rica</FoodName>
     </owl:NamedIndividual>
@@ -359,6 +380,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Fats -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Fats">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#FoodComponent"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Feijoada -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Feijoada">
@@ -368,7 +397,7 @@
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#spices"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#vegetables"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#pork/beef"/>
-        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feijoada is a black bean stew with pork or beef, sausage, and vegetables. It&apos;s often served with rice and collard greens.</FoodDescription>
         <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Feijoada.jpg</FoodImage>
         <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feijoada</FoodName>
     </owl:NamedIndividual>
@@ -407,6 +436,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Minerals -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Minerals">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#FoodComponent"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Moqueca_de_Peixe -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Moqueca_de_Peixe">
@@ -434,7 +471,7 @@
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#onions"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#parsley"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#potatoes"/>
-        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pastéis de Bacalhau are fried pastries filled with salted codfish, potatoes, onions, and herbs. They are a popular snack or appetizer.</FoodDescription>
         <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Past%C3%A9is%20de%20Bacalhau.jpg</FoodImage>
         <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pastéis de Bacalhau</FoodName>
     </owl:NamedIndividual>
@@ -449,9 +486,17 @@
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#octopus"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#olive_oil"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#potatoes"/>
-        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polvo à Lagareiro is an octopus dish marinated in olive oil, garlic, lemon juice, and herbs, then grilled or roasted. It&apos;s often served with boiled potatoes and salad.</FoodDescription>
         <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Polvo%20%C3%A0%20Lagareiro.jpg</FoodImage>
         <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polvo à Lagareiro</FoodName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Proteins -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Proteins">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#FoodComponent"/>
     </owl:NamedIndividual>
     
 
@@ -488,6 +533,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Vitamins -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Vitamins">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#FoodComponent"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Xerém -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#Xerém">
@@ -497,7 +550,7 @@
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#garlic"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#onions"/>
         <hasIngredient rdf:resource="http://www.semanticweb.org/ivantom/ontologies/2024/3/cap-vert-dish#sausage"/>
-        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></FoodDescription>
+        <FoodDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xerém is a traditional Cape Verdean dish made with manioc flour, water, and salt. It&apos;s a versatile dish served as a side dish, main course, or even dessert. It can be cooked plain or with various add-ins.</FoodDescription>
         <FoodImage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/jiofidelus/tsotsa/blob/main/TSOTSAImg_dataset/Cap-Vert/Xer%C3%A9m.jpg</FoodImage>
         <FoodName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xerém</FoodName>
     </owl:NamedIndividual>
