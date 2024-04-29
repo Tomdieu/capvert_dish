@@ -1,21 +1,7 @@
-version: '3.8'
-
+version: '3'
 services:
-
-  web:
-
-    image: cap_verd_dish:latest
-    build:
-      context: .
-      dockerfile: Dockerfile
+  capverd_dish:
+    image: ghcr.io/tomdieu/capvert_dish/capverd_dish:latest
     ports:
-      - "3000:3000"
-    container_name: cap_verd_dish
-    volumes:
-      - .:/app
-    networks:
-      - bridge
-
-networks:
-    bridge:
-        driver: bridge
+      - 3000:3000
+      - 3030:3030
