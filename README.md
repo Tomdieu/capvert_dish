@@ -7,6 +7,7 @@ Welcome to Cap Verd Dish, a web application built with [Next.js](https://nextjs.
 Cap Verd Dish is a project aimed at showcasing the rich culinary heritage of Cape Verde through an interactive web interface. This project leverages the power of Next.js for frontend development and Fuseki for managing RDF data.
 
 The queries are found in `actions/query.tsx`.
+Otology found in `ontology/cap_vert_dishes.owl`
 
 ## Test Live
 
